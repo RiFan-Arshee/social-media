@@ -1,13 +1,13 @@
 import React from 'react'
 import Post from '../../components/Post/Post'
-import Profile from '../../components/Profile/Profile'
+import ProfileSide from '../../components/ProfileSide/ProfileSide'
 import TrendSide from '../../components/TrendSide/TrendSide'
 import './Home.css'
 
 const Home = () => {
   return (
     <div className="Home">
-        <Profile />
+        <ProfileSide />
         <Post />
         <TrendSide />
     </div>

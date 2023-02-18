@@ -2,11 +2,11 @@ import React from 'react'
 import FollowersCard from '../FollowersCard/FollowersCard'
 import LogoSearch from '../LogoSearch/LogoSearch'
 import ProfileCard from '../ProfileCard/ProfileCard'
-import './Profile.css'
+import './ProfileSide.css'
 
-const Profile = () => {
+const ProfileSide = () => {
   return (
-    <div className="Profile">
+    <div className="ProfileSide">
       <LogoSearch />
       <ProfileCard />
       <FollowersCard />
@@ -14,4 +14,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default ProfileSide
