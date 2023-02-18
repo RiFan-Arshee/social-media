@@ -1,33 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {UilPen} from '@iconscout/react-unicons'
 import './InfoCard.css'
+import EditProfile from '../EditProfile/EditProfile'
 
 const InfoCard = () => {
-  return (
-    <div className="InfoCard">
-        <div className="infoHead">
-            <h4>Your Info</h4>
-            <div>
-                <UilPen width='2rem' height='1.2rem' />
+
+    const [modalOpened, setModalOpened] = useState(false)
+
+    return (
+        <div className="InfoCard">
+            <div className="infoHead">
+                <h4>Your Info</h4>
+                <div>
+                    <UilPen width='2rem' height='1.2rem' onClick={() => setModalOpened(true)} />
+                    <EditProfile modalOpened={modalOpened} setModalOpened={setModalOpened}/>
+                </div>
             </div>
-        </div>
 
-        <div className="info">
-            <span><b>Status </b></span>
-            <span>in Relationship</span>
-        </div>
-        <div className="info">
-            <span><b>Lives in </b></span>
-            <span>Indonesia</span>
-        </div>
-        <div className="info">
-            <span><b>Works at </b></span>
-            <span>Arshee Corp.</span>
-        </div>
+            <div className="info">
+                <span><b>Status </b></span>
+                <span>in Relationship</span>
+            </div>
+            <div className="info">
+                <span><b>Lives in </b></span>
+                <span>Indonesia</span>
+            </div>
+            <div className="info">
+                <span><b>Works at </b></span>
+                <span>Arshee Corp.</span>
+            </div>
 
-        <button className="button logout-btn">Log Out</button>
-    </div>
-  )
+            <button className="button logout-btn">Log Out</button>
+        </div>
+    )
 }
 
 export default InfoCard
